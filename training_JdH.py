@@ -19,12 +19,6 @@ df_kingcnt = DataFrame(kingcnt,columns=['id', 'date', 'price', 'bedrooms', 'bath
 df_kingcnt.fillna({'waterfront':0, 'view':0}, inplace=True)
 
 
-#transforming data
-df_kingcnt['price_log'] = np.log(df_kingcnt['price'])
-df_kingcnt['sqft_lot_log'] = np.log(df_kingcnt['sqft_lot'])
-df_kingcnt['sqft_lot15_log'] = np.log(df_kingcnt['sqft_lot15'])
-
-
 #splitting data
 print("-----  Splitting the data in train and test ----")
 train, test = train_test_split(df_kingcnt, test_size=0.33, random_state=42)
@@ -39,10 +33,10 @@ train = train[train.sqft_lot15 < 500000]
 
 
 #feature engineering
-X_train = df_kingcnt[['bedrooms','bathrooms','sqft_living','sqft_lot_log','waterfront','view','grade','sqft_above','sqft_living15','sqft_lot15_log']]
-y_train = df_kingcnt['price_log']
-X_test = df_kingcnt[['bedrooms','bathrooms','sqft_living','sqft_lot_log','waterfront','view','grade','sqft_above','sqft_living15','sqft_lot15_log']]
-y_test = df_kingcnt['price_log']
+X_train = df_kingcnt[['bedrooms','bathrooms','sqft_living','sqft_lot','waterfront','view','grade','sqft_above','sqft_living15','sqft_lot15']]
+y_train = df_kingcnt['price']
+X_test = df_kingcnt[['bedrooms','bathrooms','sqft_living','sqft_lot','waterfront','view','grade','sqft_above','sqft_living15','sqft_lot15']]
+y_test = df_kingcnt['price']
 
 
 #adding the constant
