@@ -33,10 +33,10 @@ train = train[train.sqft_lot15 < 500000]
 
 
 #feature engineering
-X_train = df_kingcnt[['bedrooms','bathrooms','sqft_living','sqft_lot','waterfront','view','grade','sqft_above','sqft_living15','sqft_lot15']]
-y_train = df_kingcnt['price']
-X_test = df_kingcnt[['bedrooms','bathrooms','sqft_living','sqft_lot','waterfront','view','grade','sqft_above','sqft_living15','sqft_lot15']]
-y_test = df_kingcnt['price']
+X_train = train[['bedrooms','bathrooms','sqft_living','sqft_lot','waterfront','view','grade','sqft_above','sqft_living15','sqft_lot15']]
+y_train = train['price']
+X_test = test[['bedrooms','bathrooms','sqft_living','sqft_lot','waterfront','view','grade','sqft_above','sqft_living15','sqft_lot15']]
+y_test = test['price']
 
 
 #adding the constant
