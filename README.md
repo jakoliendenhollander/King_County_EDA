@@ -12,7 +12,7 @@ Potential compromises regarding the location and the condition of houses are:
 
 A multiple linear regression model was used to compute what impact these compromises have on the price.
 
-## 1: Create conda environment kingcounty
+### Create conda environment kingcounty
 ```
 conda create --name kingcounty python=3.8.5
 conda install -n kingcounty pytest==6.1.1
@@ -24,7 +24,7 @@ conda install -n kingcounty statsmodels
 conda install -n kingcounty bokeh
 ```
 
-## Column Names and descriptions for Kings County Data Set
+### Column Names and descriptions for Kings County Data Set
 * **id** - unique identifier for a house
 * **date** - house was sold
 * **price** -  is prediction target
