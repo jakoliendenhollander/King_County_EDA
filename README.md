@@ -1,5 +1,16 @@
-# King_County_EDA
-First assignment - DIY at Neuefische
+# King County data case
+
+## Impact of location and condition on housing prices in King County
+
+What compromises does a customer need to make if he/she wants to buy a house with mid to mid-high price in King County?
+
+Potential compromises regarding the location and the condition of houses are:
+ * having a waterfront view
+ * located in a good neighbourhood, where the 15 nearest houses are large and have large plots
+ * being renovated
+ * being in a good condition
+
+A multiple linear regression model was used to compute what impact these compromises have on the price.
 
 ## 1: Create conda environment kingcounty
 ```
